@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMqq8yZ5Zan8QR56c6+76A0GpM9x5vD8M6kRQ2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container" id="quizContainer">
+        <div class="logo-container">
+    <img src="logo.png" alt="Company Logo" class="logo">
+</div>
+
+        <h1>Career</h1>
+        <div id="timer" style="font-size: 16px;   text-align: right;">Time Left: 60 seconds</div>
+
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question" id="q1">
+                <p>1. What type of tasks do you prefer?</p>
+                <label><input type="radio" name="q1" value="a"> Solving complex problems</label>
+                <label><input type="radio" name="q1" value="b"> Building things</label>
+                <label><input type="radio" name="q1" value="c"> Communicating with people</label>
+                <label><input type="radio" name="q1" value="d"> Creating visual designs</label>
+            </div>
+            <!-- Additional questions... -->
+             <div class="question" id="q2">
+                <p>2. How do you approach a new project?</p>
+                <label><input type="radio" name="q2" value="a"> Analyze data</label>
+                <label><input type="radio" name="q2" value="b"> Write code or build models</label>
+                <label><input type="radio" name="q2" value="c"> Plan out marketing strategies</label>
+                <label><input type="radio" name="q2" value="d"> Design graphical elements</label>
+            </div>
+            <!-- Question 3 -->
+            <div class="question" id="q3">
+                <p>3. What excites you the most in a career?</p>
+                <label><input type="radio" name="q3" value="a"> Discovering patterns in data</label>
+                <label><input type="radio" name="q3" value="b"> Creating software solutions</label>
+                <label><input type="radio" name="q3" value="c"> Understanding customer behavior</label>
+                <label><input type="radio" name="q3" value="d"> Artistic expression</label>
+            </div>
+            <!-- Question 4 -->
+            <div class="question" id="q4">
+                <p>4. Which of the following describes you best?</p>
+                <label><input type="radio" name="q4" value="a"> Analytical thinker</label>
+                <label><input type="radio" name="q4" value="b"> Technical and logical</label>
+                <label><input type="radio" name="q4" value="c"> Social and outgoing</label>
+                <label><input type="radio" name="q4" value="d"> Creative and innovative</label>
+            </div>
+            <!-- Question 5 -->
+            <div class="question" id="q5">
+                <p>5. What skill do you excel at the most?</p>
+                <label><input type="radio" name="q5" value="a"> Data analysis</label>
+                <label><input type="radio" name="q5" value="b"> Programming</label>
+                <label><input type="radio" name="q5" value="c"> Marketing strategies</label>
+                <label><input type="radio" name="q5" value="d"> Graphic design</label>
+            </div>
+            <button type="submit" id="submitButton">Submit Quiz</button>
+        </form>
+
+        <div id="spinner" style="display: none;"></div>
+        <div id="resultContainer" style="display: none;">
+            <div id="resultMessage"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js">
+
+    </script>
+</body>
+</html>

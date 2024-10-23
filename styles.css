@@ -1,0 +1,259 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f3;
+    margin: 0;
+    padding: 0;
+}
+
+.quiz-container {
+    margin: 50px auto;
+    width: 90%; /* Change width for responsiveness */
+    max-width: 600px; /* Set a maximum width */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px; /* Increase heading size */
+}
+
+.question {
+    margin-bottom: 20px;
+    font-size: 18px; /* Increase question size */
+}
+
+label {
+    display: flex; /* Use flexbox for better alignment */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 15px; /* More space between options */
+    font-size: 16px; /* Increase font size */
+    padding: 10px; /* Add padding */
+    border-radius: 8px; /* Round corners */
+    transition: background-color 0.2s; /* Smooth background transition */
+}
+
+label:hover {
+    background-color: #f0f8ff; /* Light hover effect */
+}
+
+input[type="radio"] {
+    margin-right: 15px; /* Add space between radio and label */
+    transform: scale(1.3); /* Increase radio button size */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Round corners */
+    font-size: 18px; /* Increase button text size */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px; /* Add margin on top */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+#spinner {
+    display: none;
+    margin: 30px auto;
+    width: 60px;
+    height: 60px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#result {
+    display: none; /* Hide result section initially */
+    margin-top: 30px;
+    font-size: 22px; /* Increase result font size */
+    text-align: center;
+    color: #28a745;
+    font-weight: bold;
+}
+
+#resultMessage {
+    font-size: 24px; /* Larger font size for visibility */
+    color: #28a745; /* Green color for the message */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 10px; /* Space between message and advice */
+    text-align: center; /* Center text */
+}
+
+#advice {
+    font-size: 18px; /* Slightly smaller font size */
+    color: #333; /* Dark gray for readability */
+    text-align: center; /* Center text */
+    background-color: #e7f9e7; /* Light green background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding for comfort */
+    width: 100%; /* Full width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .quiz-container {
+        width: 95%; /* Slightly increase width for small devices */
+    }
+
+    h1 {
+        font-size: 26px; /* Adjust heading size */
+    }
+
+    .question {
+        font-size: 16px; /* Adjust question size */
+    }
+
+    label {
+        font-size: 15px; /* Adjust label size */
+    }
+
+    button {
+        font-size: 16px; /* Adjust button size */
+    }
+
+    #result {
+        font-size: 20px; /* Adjust result size */
+    }
+
+    #resultMessage {
+        font-size: 20px; /* Adjust result message size */
+    }
+
+    #advice {
+        font-size: 16px; /* Adjust advice size */
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 15px; /* Adjust padding for small devices */
+    }
+
+    h1 {
+        font-size: 22px; /* Adjust heading size */
+    }
+
+    .question {
+        font-size: 14px; /* Adjust question size */
+    }
+
+    label {
+        font-size: 14px; /* Adjust label size */
+    }
+
+    button {
+        font-size: 15px; /* Adjust button size */
+    }
+
+    #result {
+        font-size: 18px; /* Adjust result size */
+    }
+
+    #resultMessage {
+        font-size: 18px; /* Adjust result message size */
+    }
+
+    #advice {
+        font-size: 14px; /* Adjust advice size */
+    }
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border: 2px solid #28a745; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#result:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+.logo-container {
+    text-align: center; /* Center align the logo */
+    margin: 20px 0; /* Margin above and below the logo */
+}
+
+.logo {
+    max-width: 100%; /* Make the logo responsive */
+    height: auto; /* Maintain aspect ratio */
+    width: 150px; /* Set a default width */
+    transition: transform 0.3s ease; /* Add a smooth transition for hover effect */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slightly enlarge logo on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px; /* Adjust logo size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px; /* Adjust logo size for mobile devices */
+    }
+}
+.quiz-container {
+    position: relative; /* Allows absolute positioning of children */
+    margin: 50px auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+#timer {
+    position: absolute; /* Positioning the timer */
+    top: 35px; /* Adjust as necessary */
+    right: 20px; /* Adjust as necessary */
+    font-size: 16px; /* Smaller font size */
+    color: black; /* Timer color */
+    text-align: right; /* Align text to the right */
+    z-index: 10; /* Ensure it stays above other elements */
+}
+
+/* Blinking effect for the timer */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    color: red; /* Blink color */
+    animation: blink 0.5s infinite; /* Blinking animation */
+}
