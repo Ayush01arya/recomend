@@ -51,7 +51,7 @@ function submitQuiz() {
     });
 
     // Send answers to the backend
-    fetch('https://recomend-phi.vercel.app/submit', {  // Ensure URL matches Flask route
+    fetch('https://recomend-t26j.vercel.app/submit', {  // Ensure URL matches Flask route
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
